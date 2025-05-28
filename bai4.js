@@ -32,5 +32,5 @@ if(check == false) {
 // hàm làm tròn số 
 let num = 1.4345;
 let numa = num.toFixed();//làm tron số 2 
-let numb = num.toFixed(2);//làm tron số 2 
+let numb = num.toFixed(2);//làm tron số đến 2 chữ số 
 console.log(numb);
