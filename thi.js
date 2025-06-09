@@ -15,8 +15,21 @@ function changeRadio(event) {
 document.getElementById('noithanh').onchange = changeRadio;
 document.getElementById('ngoaithanh').onchange = changeRadio;
 function datMua() {
+    // xử lý validate trong nút
+    let loi = document.getElementsByClassName('loi');
+  
+    let tenkh = document.getElementById('tenkh').value;
+    // validate rỗng
+    if (tenkh == "") {
+        loi[0].innerHTML = "Bạn chưa nhập tên khách hàng";
+        return;
+    }
     let soluong = document.getElementById('soluong').value;
     let dongia = document.getElementById('dongia').value;
+    if(dongia == "") {
+        loi[1].innerHTML = "Bạn chưa nhập đơn giá";
+        return;
+    }
     let thanhtien = soluong * dongia;
     document.getElementById('thanhtien').value = thanhtien;
 }
